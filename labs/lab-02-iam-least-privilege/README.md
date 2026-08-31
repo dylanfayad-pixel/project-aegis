@@ -2,8 +2,7 @@
 
 ## Executive Summary
 
-Designed, implemented, and validated a customer-managed AWS IAM policy following the Principle of Least Privilege. Permissions were verified using a dedicated test account to confirm expected authorization behavior.
-
+Designed and implemented an enterprise-style AWS Identity and Access Management (IAM) environment using Role-Based Access Control (RBAC), customer-managed policies, AWS-managed policies, and dedicated test accounts to validate least-privilege access across Administrator, Developer, Security, and Auditor roles.
 ---
 
 # Objective
@@ -15,6 +14,7 @@ Understand how AWS IAM evaluates permissions by creating custom policies, assign
 # AWS Services
 
 - AWS IAM
+- AWS Console
 
 ---
 
@@ -23,9 +23,12 @@ Understand how AWS IAM evaluates permissions by creating custom policies, assign
 - IAM Users
 - IAM Groups
 - Customer-Managed Policies
+- AWS-Managed Policies
 - JSON
 - Principle of Least Privilege
+- Role-Based Access Control (RBAC)
 - Permission Validation
+- IAM Policy Evaluation
 
 ---
 
@@ -90,12 +93,35 @@ AWS Account
 └── Security
     └── security1
 ```
-# Lessons Learned
+## Key Takeaways
 
-IAM policies should always be validated using test accounts instead of assuming permissions behave as expected.
+- Enterprise IAM should separate permissions by job function.
+- Least privilege reduces the attack surface of cloud environments.
+- Customer-managed IAM policies provide greater flexibility than AWS-managed policies.
+- IAM policies should always be validated using dedicated test accounts.
+
+---
+
+## Future Improvements
+
+- Replace AWS-managed ReadOnlyAccess with a custom Auditor policy.
+- Restrict S3 permissions to specific bucket ARNs instead of using "*".
+- Implement IAM conditions for additional security controls.
+- Integrate IAM roles with future AWS services.
 
 ---
 
 # Resume Impact
 
-This sprint demonstrates practical experience designing and validating least-privilege IAM policies using AWS IAM.
+- Enterprise IAM Design
+- Role-Based Access Control (RBAC)
+- Least Privilege Implementation
+- Customer-Managed IAM Policies
+- Security Validation
+- Cloud Security Documentation
+
+---
+
+## Reflection
+
+This lab demonstrated that secure cloud environments rely on well-designed identity and access management. Separating permissions by job function and validating authorization through dedicated test accounts reinforced the importance of the Principle of Least Privilege and Role-Based Access Control in enterprise AWS environments.
