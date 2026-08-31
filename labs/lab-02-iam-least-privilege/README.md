@@ -47,7 +47,14 @@ Organizations create custom IAM policies instead of relying solely on AWS-manage
 
 # Policy Created
 
-Developer-S3-Basic-Access
+### Developer-S3-Basic-Access
+- Customer-managed IAM policy allowing developers to list S3 buckets and upload/download objects while following the Principle of Least Privilege.
+
+### Security-Operations-ReadOnly
+- Customer-managed IAM policy providing read-only access to AWS security services including CloudTrail, GuardDuty, AWS Config, Security Hub, and CloudWatch Logs.
+
+### ReadOnlyAccess (AWS Managed)
+- AWS-managed policy attached to the Auditors group to provide enterprise-wide read-only visibility for auditing and compliance.
 
 ---
 
