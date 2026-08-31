@@ -53,22 +53,36 @@ Developer-S3-Basic-Access
 
 # Validation
 
-A dedicated IAM user named **developer1** was created and assigned only to the Developers group.
+## Enterprise IAM Environment
 
-### Successful
+The AWS account now follows a role-based access control (RBAC) model with four distinct job functions.
 
-- Access Amazon S3
-- View available buckets
+| Group | Purpose | Status |
+|--------|---------|:------:|
+| Administrators | Full AWS administration | ✅ |
+| Developers | Application development using least privilege | ✅ |
+| Security | Security monitoring and investigation | ✅ |
+| Auditors | Read-only access for compliance and review | ✅ |
 
-### Blocked
-
-- IAM Administration
-- Bucket Creation
-
-The observed behavior matched the intended least-privilege design.
-
+Dedicated IAM test accounts were created to validate each role and verify that permissions behaved as expected.
 ---
+## Enterprise Architecture
 
+```text
+AWS Account
+│
+├── Administrators
+│   └── dylan-admin
+│
+├── Developers
+│   └── developer1
+│
+├── Auditors
+│   └── auditor1
+│
+└── Security
+    └── security1
+```
 # Lessons Learned
 
 IAM policies should always be validated using test accounts instead of assuming permissions behave as expected.
