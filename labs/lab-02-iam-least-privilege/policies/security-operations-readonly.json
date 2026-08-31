@@ -1,0 +1,22 @@
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Sid": "AllowSecurityOperationsReadOnly",
+			"Effect": "Allow",
+			"Action": [
+				"cloudtrail:LookupEvents",
+				"cloudtrail:DescribeTrails",
+				"guardduty:Get*",
+				"guardduty:List*",
+				"securityhub:Get*",
+				"securityhub:List*",
+				"config:Get*",
+				"config:Describe*",
+				"logs:Get*",
+				"logs:Describe*"
+			],
+			"Resource": "*"
+		}
+	]
+}
