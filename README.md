@@ -37,7 +37,7 @@ Build enterprise-level cloud security skills while developing a portfolio that d
 | Lab 1 | AWS Account Hardening & Security Baseline | ✅ |
 | Lab 2 | IAM & Least Privilege | ✅ |
 | Lab 3 | Amazon S3 Security | ✅ |
-| Lab 4 | VPC & Network Security | ⏳ |
+| Lab 4 | VPC & Network Security | ✅ |
 | Lab 5 | EC2 Security | ⏳ |
 | Lab 6 | CloudTrail | ⏳ |
 | Lab 7 | CloudWatch | ⏳ |
