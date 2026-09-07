@@ -1,141 +1,214 @@
-# 🛡️ Project Aegis
+# Project Aegis
 
-> Enterprise Cloud Security Engineering Portfolio
+## Enterprise Cloud Security Engineering Portfolio
 
-Project Aegis is a long-term cloud security engineering portfolio documenting my journey from cybersecurity student to cloud security engineer.
+Project Aegis is a hands-on AWS cloud engineering and security portfolio focused on designing, implementing, securing, and validating enterprise-style cloud infrastructure.
 
-Rather than simply completing tutorials, this repository focuses on designing, implementing, validating, and documenting real-world cloud security concepts using AWS.
+The project follows a lab-based progression covering identity and access management, storage security, networking, compute security, monitoring, detection, automation, and incident response.
 
-Every lab follows an engineering workflow that produces:
-
-- Hands-on AWS implementations
-- Professional documentation
-- Architecture decisions
-- Validation and testing
-- Resume-ready accomplishments
-- Interview preparation
+Each lab documents the architecture, security decisions, implementation, validation testing, lessons learned, and interview preparation associated with the environment.
 
 ---
 
-# 🎯 Mission
+## Project Objectives
 
-Build enterprise-level cloud security skills while developing a portfolio that demonstrates practical experience in:
+Project Aegis is designed to develop practical experience with:
 
-- AWS Cloud Security
-- Identity & Access Management (IAM)
-- Infrastructure Security
-- Cloud Monitoring
+- AWS cloud infrastructure
+- Cloud security architecture
+- Identity and Access Management
+- Least-privilege access control
+- Secure networking
+- Private cloud workloads
+- Linux administration
+- Secure AWS service connectivity
+- Encryption
+- Monitoring and logging
 - Infrastructure as Code
-- Security Automation
+- Cloud automation
+- Incident response
 
 ---
 
-# 🗺️ Learning Roadmap
+## Current Technologies
 
-| Lab | Topic | Status |
-|---------|-------------------------------|:------:|
-| Lab 1 | AWS Account Hardening & Security Baseline | ✅ |
-| Lab 2 | IAM & Least Privilege | ✅ |
-| Lab 3 | Amazon S3 Security | ✅ |
-| Lab 4 | VPC & Network Security | ✅ |
-| Lab 5 | EC2 Security | ✅ |
-| Lab 6 | CloudTrail | ⏳ |
-| Lab 7 | CloudWatch | ⏳ |
-| Lab 8 | GuardDuty | ⏳ |
-| Lab 9 | AWS Config | ⏳ |
-| Lab 10 | Security Hub | ⏳ |
-| Lab 11 | Terraform | ⏳ |
-| Lab 12 | Python Security Automation | ⏳ |
-| Lab 13 | Incident Response | ⏳ |
-| Lab 14 | Enterprise Architecture | ⏳ |
-| Lab 15 | Project Aegis Capstone | ⏳ |
+### Cloud
 
----
+- Amazon Web Services (AWS)
+- Amazon EC2
+- Amazon S3
+- Amazon VPC
+- Amazon EBS
+- AWS Systems Manager
+- AWS PrivateLink
+- VPC Interface Endpoints
 
-# 💻 Current Technologies
+### Identity & Security
 
-## Cloud
-- AWS IAM
-- AWS Budgets
-- Amazon S3 (Learning)
-
-## Security
-- Multi-Factor Authentication (MFA)
-- Principle of Least Privilege
+- AWS Identity and Access Management (IAM)
+- IAM Roles
+- IAM Policies
 - Role-Based Access Control (RBAC)
-- Customer-Managed IAM Policies
+- Principle of Least Privilege
+- Multi-Factor Authentication (MFA)
+- Security Groups
+- S3 Bucket Policies
+- IMDSv2
+- AWS Key Management Service (KMS)
 
-## Development
+### Networking
+
+- VPCs
+- Public and Private Subnets
+- Multiple Availability Zones
+- Internet Gateways
+- Route Tables
+- Security Groups
+- Private IPv4 Addressing
+- VPC Interface Endpoints
+- Security Group Referencing
+
+### Compute & Systems
+
+- Amazon EC2
+- Amazon Linux 2023
+- AWS Systems Manager Session Manager
+- EC2 IAM Instance Profiles
+- Encrypted EBS Storage
+- Linux Command Line
+
+### Development & Documentation
+
 - Git
 - GitHub
 - JSON
+- Markdown
+- Architecture Documentation
+- Validation Testing
 
 ---
 
-# 📁 Repository Structure
+## Completed Labs
 
-```text
-project-aegis/
-│
-├── career/
-│   ├── master-resume/
-│   ├── resume-bullets.md
-│   ├── interview-notes/
-│   └── certifications.md
-│
-├── labs/
-│
-├── diagrams/
-│
-├── documentation/
-│
-├── terraform/
-│
-├── python/
-│
-└── assets/
-```
+### Lab 1 – AWS Account Hardening & Security Baseline
+
+Implemented foundational AWS account security including:
+
+- Root account MFA
+- IAM administrative access
+- AWS Budgets
+- Secure administrative workflow
+
+### Lab 2 – Enterprise IAM & Least Privilege
+
+Designed an enterprise IAM architecture including:
+
+- Administrator, Developer, Security, and Auditor roles
+- Role-Based Access Control
+- Customer-managed IAM policies
+- Principle of Least Privilege
+- Dedicated IAM validation accounts
+
+### Lab 3 – Amazon S3 Security
+
+Secured Amazon S3 storage using:
+
+- Block Public Access
+- Bucket Versioning
+- Server-Side Encryption
+- IAM identity-based policies
+- Resource-based bucket policies
+- Explicit Deny validation
+
+### Lab 4 – Amazon VPC & Network Architecture
+
+Designed a production-style AWS network using:
+
+- Multiple Availability Zones
+- Public and private subnets
+- Internet Gateway
+- Route Tables
+- Security Groups
+- Network segmentation
+- Restricted administrative access
+
+### Lab 5 – Amazon EC2 Compute Security
+
+Deployed and secured a private Amazon EC2 workload using:
+
+- Amazon Linux 2023
+- Private subnet deployment
+- No public IPv4 address
+- Zero inbound Security Group rules
+- AWS Systems Manager Session Manager
+- EC2 IAM role and instance profile
+- AWS PrivateLink
+- Systems Manager VPC interface endpoints
+- Encrypted EBS storage
+- IMDSv2 enforcement
+- Security validation testing
 
 ---
 
-# 📖 Documentation Standards
+## Project Roadmap
 
-Every lab includes:
+- [x] Lab 1 – AWS Account Hardening
+- [x] Lab 2 – Enterprise IAM & Least Privilege
+- [x] Lab 3 – Amazon S3 Security
+- [x] Lab 4 – Amazon VPC & Network Architecture
+- [x] Lab 5 – Amazon EC2 Compute Security
+- [ ] Lab 6 – AWS CloudTrail
+- [ ] Lab 7 – Amazon CloudWatch
+- [ ] Lab 8 – Amazon GuardDuty
+- [ ] Lab 9 – AWS Config
+- [ ] Lab 10 – AWS Security Hub
+- [ ] Lab 11 – Infrastructure as Code with Terraform
+- [ ] Lab 12 – Python AWS Security Automation
+- [ ] Lab 13 – Cloud Incident Response
+- [ ] Lab 14 – Project Aegis Capstone
 
-- Executive Summary
+---
+
+## Security Principles
+
+Project Aegis applies several core cloud security principles throughout the environment:
+
+- Least privilege
+- Defense in depth
+- Secure-by-default configuration
+- Identity-based access control
+- Network segmentation
+- Private workload architecture
+- Encryption at rest
+- Temporary credentials
+- Reduced attack surface
+- Security control validation
+- Cost-aware cloud engineering
+
+---
+
+## Documentation
+
+Each completed lab contains documentation covering:
+
+- Executive summary
 - Objectives
-- AWS Services Used
-- Security Concepts
-- Implementation
-- Validation Results
-- Lessons Learned
-- Resume Bullet
-- Interview Questions
-- Source Code / Policies
+- AWS services
+- Skills learned
+- Security concepts
+- Architecture
+- Validation testing
+- Lessons learned
+- Interview preparation
+
+The goal is not only to configure AWS services, but to understand why each security control exists and demonstrate that the control works as intended.
 
 ---
 
-# 🏆 Certifications
+## Current Focus
 
-## In Progress
+Project Aegis has completed its foundational AWS identity, storage, networking, and compute-security phases.
 
-- AWS Certified Cloud Practitioner
+The next phase focuses on cloud visibility, logging, monitoring, and threat detection beginning with **AWS CloudTrail**.
 
-## Planned
-
-- CompTIA Security+
-- AWS Solutions Architect – Associate
-- AWS Security – Specialty
-- Terraform Associate
-
----
-
-# 🎯 Long-Term Goal
-
-Develop the knowledge, portfolio, and practical experience required to become a Cloud Security Engineer by graduation.
-
-Project Aegis is designed to demonstrate not only technical implementation, but also engineering documentation, validation, and security-focused decision making.
-
----
-
-⭐ Built while pursuing a career in Cloud Security.
+Future phases will introduce Infrastructure as Code, Python automation, incident response, and a final enterprise cloud security capstone.
