@@ -67,7 +67,6 @@ Security controls included:
 - Management event auditing
 - MFA-authenticated administrative access
 
-![CloudTrail Configuration](screenshots/01-cloudtrail-configuration.png)
 
 ---
 
@@ -118,7 +117,7 @@ The event record showed that TCP port 22 had been authorized from `0.0.0.0/0`.
 
 CloudTrail also provided attribution information including the authenticated IAM identity, MFA status, event timestamp, AWS Region, API operation, and affected security group.
 
-![SSH Exposure Detected](screenshots/02-ssh-exposure-detected.png)
+
 
 ---
 
@@ -130,7 +129,6 @@ After the insecure rule was removed, CloudTrail recorded:
 
 The event confirmed that the same TCP port 22 rule allowing `0.0.0.0/0` had been revoked.
 
-![SSH Exposure Remediated](screenshots/03-ssh-exposure-remediated.png)
 
 ### Incident Timeline
 
@@ -150,7 +148,7 @@ CloudTrail was configured to deliver logs to an Amazon S3 bucket.
 
 I verified that compressed `.json.gz` CloudTrail log objects were successfully delivered under the regional and date-based S3 log hierarchy.
 
-![CloudTrail S3 Logs](screenshots/04-cloudtrail-s3-logs.png)
+
 
 This provides persistent audit records beyond the CloudTrail Event History interface.
 
@@ -162,7 +160,7 @@ CloudTrail log objects stored in S3 were protected using server-side encryption 
 
 I verified the encryption configuration directly from the properties of a delivered CloudTrail log object.
 
-![CloudTrail KMS Encryption](screenshots/05-cloudtrail-kms-encryption.png)
+
 
 Encrypting audit logs helps protect the confidentiality of security-sensitive activity records stored in S3.
 
@@ -174,7 +172,7 @@ CloudTrail log file validation was enabled for the trail.
 
 I verified that CloudTrail generated digest objects under the `CloudTrail-Digest` S3 hierarchy.
 
-![CloudTrail Digest Validation](screenshots/06-cloudtrail-digest-validation.png)
+
 
 CloudTrail digest files provide integrity information that can be used to validate delivered log files and detect modification or deletion after delivery.
 
