@@ -2,9 +2,9 @@
 
 ## Enterprise Cloud Security Engineering Portfolio
 
-Project Aegis is a hands-on AWS cloud engineering and security portfolio focused on designing, implementing, securing, and validating enterprise-style cloud infrastructure.
+Project Aegis is a hands-on AWS cloud engineering and security portfolio focused on designing, implementing, securing, monitoring, and validating enterprise-style cloud infrastructure.
 
-The project follows a lab-based progression covering identity and access management, storage security, networking, compute security, monitoring, detection, automation, and incident response.
+The project follows a lab-based progression covering identity and access management, storage security, networking, compute security, auditing, monitoring, detection, automation, and incident response.
 
 Each lab documents the architecture, security decisions, implementation, validation testing, lessons learned, and interview preparation associated with the environment.
 
@@ -22,8 +22,9 @@ Project Aegis is designed to develop practical experience with:
 - Private cloud workloads
 - Linux administration
 - Secure AWS service connectivity
-- Encryption
-- Monitoring and logging
+- Encryption and key management
+- Cloud auditing and logging
+- Monitoring and detection
 - Infrastructure as Code
 - Cloud automation
 - Incident response
@@ -41,6 +42,8 @@ Project Aegis is designed to develop practical experience with:
 - Amazon EBS
 - AWS Systems Manager
 - AWS PrivateLink
+- AWS CloudTrail
+- AWS Key Management Service (KMS)
 - VPC Interface Endpoints
 
 ### Identity & Security
@@ -55,6 +58,8 @@ Project Aegis is designed to develop practical experience with:
 - S3 Bucket Policies
 - IMDSv2
 - AWS Key Management Service (KMS)
+- SSE-KMS Encryption
+- CloudTrail Log File Validation
 
 ### Networking
 
@@ -77,6 +82,17 @@ Project Aegis is designed to develop practical experience with:
 - Encrypted EBS Storage
 - Linux Command Line
 
+### Monitoring & Auditing
+
+- AWS CloudTrail
+- CloudTrail Event History
+- Multi-Region Trails
+- AWS API Activity Auditing
+- Management Event Logging
+- Persistent Audit Log Storage
+- CloudTrail Log File Validation
+- Security Event Investigation
+
 ### Development & Documentation
 
 - Git
@@ -85,6 +101,7 @@ Project Aegis is designed to develop practical experience with:
 - Markdown
 - Architecture Documentation
 - Validation Testing
+- Security Incident Documentation
 
 ---
 
@@ -148,6 +165,25 @@ Deployed and secured a private Amazon EC2 workload using:
 - IMDSv2 enforcement
 - Security validation testing
 
+### Lab 6 – AWS CloudTrail Auditing & Security Investigation
+
+Implemented persistent AWS API auditing and performed a controlled security investigation using:
+
+- Multi-Region AWS CloudTrail
+- Read and write management event logging
+- Persistent CloudTrail log delivery to Amazon S3
+- SSE-KMS encrypted audit logs
+- CloudTrail log file validation
+- CloudTrail digest files
+- AWS API activity analysis
+- IAM activity attribution
+- EC2 security group auditing
+- Controlled SSH exposure simulation
+- Security-event reconstruction
+- Remediation verification
+
+During the investigation, CloudTrail was used to identify an `AuthorizeSecurityGroupIngress` event that temporarily permitted SSH access from `0.0.0.0/0`. The corresponding `RevokeSecurityGroupIngress` event confirmed that the insecure rule was removed 43 seconds later.
+
 ---
 
 ## Project Roadmap
@@ -157,7 +193,7 @@ Deployed and secured a private Amazon EC2 workload using:
 - [x] Lab 3 – Amazon S3 Security
 - [x] Lab 4 – Amazon VPC & Network Architecture
 - [x] Lab 5 – Amazon EC2 Compute Security
-- [ ] Lab 6 – AWS CloudTrail
+- [x] Lab 6 – AWS CloudTrail Auditing & Security Investigation
 - [ ] Lab 7 – Amazon CloudWatch
 - [ ] Lab 8 – Amazon GuardDuty
 - [ ] Lab 9 – AWS Config
@@ -183,6 +219,9 @@ Project Aegis applies several core cloud security principles throughout the envi
 - Temporary credentials
 - Reduced attack surface
 - Security control validation
+- Auditability and accountability
+- Log integrity
+- Incident reconstruction
 - Cost-aware cloud engineering
 
 ---
@@ -201,14 +240,14 @@ Each completed lab contains documentation covering:
 - Lessons learned
 - Interview preparation
 
-The goal is not only to configure AWS services, but to understand why each security control exists and demonstrate that the control works as intended.
+The goal is not only to configure AWS services, but to understand why each security control exists, validate that the control works as intended, and document evidence of the resulting security posture.
 
 ---
 
 ## Current Focus
 
-Project Aegis has completed its foundational AWS identity, storage, networking, and compute-security phases.
+Project Aegis has completed its foundational AWS identity, storage, networking, compute-security, and cloud-auditing phases.
 
-The next phase focuses on cloud visibility, logging, monitoring, and threat detection beginning with **AWS CloudTrail**.
+The current phase focuses on expanding cloud visibility from API auditing into operational monitoring and observability using **Amazon CloudWatch**.
 
-Future phases will introduce Infrastructure as Code, Python automation, incident response, and a final enterprise cloud security capstone.
+Future labs will introduce threat detection with Amazon GuardDuty, configuration monitoring with AWS Config, centralized security findings with AWS Security Hub, Infrastructure as Code with Terraform, Python automation, cloud incident response, and a final enterprise cloud security capstone.
