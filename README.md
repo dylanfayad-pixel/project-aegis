@@ -194,7 +194,7 @@ During the investigation, CloudTrail was used to identify an `AuthorizeSecurityG
 - [x] Lab 4 – Amazon VPC & Network Architecture
 - [x] Lab 5 – Amazon EC2 Compute Security
 - [x] Lab 6 – AWS CloudTrail Auditing & Security Investigation
-- [ ] Lab 7 – Amazon CloudWatch
+- [x] Lab 7 – Amazon CloudWatch
 - [ ] Lab 8 – Amazon GuardDuty
 - [ ] Lab 9 – AWS Config
 - [ ] Lab 10 – AWS Security Hub
